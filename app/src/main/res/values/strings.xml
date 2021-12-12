@@ -1,36 +1,41 @@
 <resources>
-    <string name="upper">Upper!</string>
-    <string name="lower">Lower!</string>
+    <string name="monday">Понед.</string>
+    <string name="wednesday">Среда</string>
+    <string name="friday">Пятница</string>
+
     <string name="end">Хочу домой!</string>
     <string name="fin_end">Я красотка!</string>
     <string name="next_exe">Следующее упражнение</string>
     <string name="next_set">Следующий подход</string>
-    <string name="Hi">Привет, фитоняшка! Что у нас сегодня?</string>
+    <string name="Hi">Привет! Что у нас сегодня?</string>
     <string name="app_name">Get fit!</string>
 
 
-    <string-array name="myUpper">
+    <string-array name="myMonday">
+        <item>Разведение ног</item>
+        <item>Сгибание ног</item>
+        <item>Разгибание ног</item>
+        <item>Отжимание</item>
+        <item>Пресс</item>
+        <item>Тяга от груди</item>
+    </string-array>
+
+    <string-array name="myWednesday">
+        <item>Становая тяга</item>
+        <item>Жим платформы</item>
+        <item>Гиперэкстензия</item>
         <item>Подтягивания</item>
         <item>Отжимания трицепсами</item>
+    </string-array>
+
+    <string-array name="myFriday">
+        <item>Приседание</item>
+        <item>Выпады</item>
+        <item>Румынская тяга</item>
         <item>Тяга блин к груди</item>
-        <item>Гиперэкстензия</item>
         <item>Тяга блока к груди</item>
         <item>Тяга блока к животу</item>
         <item>Тяга от груди</item>
-        <item>Гантели</item>
-        <item>Пресс</item>
-    </string-array>
-
-    <string-array name="myLower">
-        <item>Разведение ног</item>
-        <item>Разгибание ног</item>
-        <item>Становая тяга</item>
-        <item>Приседание</item>
-        <item>Сгибание ног</item>
-        <item>Жим платформы</item>
-        <item>Румынская тяга</item>
-        <item>Выпады</item>
-        <item>Ягодичный мостик</item>
     </string-array>
 
     <string-array name="myQuote">
@@ -79,7 +84,6 @@
         <item>Займись собой, а то через 5 лет придется ставить котика на аватарку</item>
         <item>Вчера была первый раз в тренажерном зале. В жизни себя так не насиловала за деньги!</item>
         <item>Если не знаешь, что делать — приседай. Проблему это не решит, но отвлечет и попу накачаешь!</item>
-        <item>Ягодичный мостик</item>
-    </string-array>
+        </string-array>
 
 </resources>
