@@ -91,20 +91,19 @@ class MainActivity : AppCompatActivity() {
                 onListExe(counterExe, day)
             }
             counterExe > 4 -> {
-                var tvQuote = findViewById<TextView>(R.id.tv_quote)
-                tvQuote.text = "Пора домой!!!  "
+                onClickEnd(view)
             }
         }
     }
 
-    /*fun onClickEnd(view: View) {
+    fun onClickEnd(view: View) {
         val myQuote = resources.getStringArray(R.array.myQuote)
         val arraySize = myQuote.size
         val rand = Random.nextInt(arraySize)
         val name = myQuote[rand]
         var tvQuote = findViewById<TextView>(R.id.tv_quote)
         tvQuote.text = "Пора домой!!!  " + name
-    }*/
+    }
 
     fun onClickClose(view: View) {
         super.onDestroy()
