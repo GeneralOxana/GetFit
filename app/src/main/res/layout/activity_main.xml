@@ -17,7 +17,9 @@
         android:padding="5dp"
         android:text="@string/Hi"
         android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="3dp" />
 
     <TextView
         android:id="@+id/tv_day"
@@ -28,7 +30,14 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintTop_toBottomOf="@+id/tv_hi" />
 
-
+    <TextView
+        android:id="@+id/tv_exes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:layout_constraintTop_toBottomOf="@+id/tv_hi" />
 
 
     <Button
@@ -61,18 +70,7 @@
 
 
 
-    <Button
-        android:id="@+id/fin_end"
-        android:layout_width="150dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="32dp"
-        android:onClick="onClickClose"
-        android:text="@string/fin_end"
-        android:textAppearance="@style/TextAppearance.AppCompat.Small"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/next_exe" />
+
 
     <TextView
         android:id="@+id/tv_quote"
@@ -126,5 +124,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.98" />
+
+    <Button
+        android:id="@+id/fin_end"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/fin_end"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/next_exe" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

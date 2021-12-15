@@ -1,14 +1,11 @@
 <resources>
-    <string name="monday">Понед.</string>
-    <string name="wednesday">Среда</string>
-    <string name="friday">Пятница</string>
-
     <string name="end">Хочу домой!</string>
-    <string name="fin_end">Я красотка!</string>
+    <string name="fin_end">Well done!</string>
     <string name="next_exe">Следующее упражнение</string>
     <string name="next_set">Следующий подход</string>
     <string name="Hi">Привет! Что у нас сегодня?</string>
     <string name="app_name">Get fit!</string>
+    <string name="day_off">Тренировка в выходной? Отлично! Час кардио тебе не повредит)</string>
 
 
     <string-array name="myMonday">
@@ -17,13 +14,14 @@
         <item>Разгибание ног</item>
         <item>Отжимание</item>
         <item>Пресс</item>
-        <item>Тяга от груди</item>
+        <item>Жим гориз.</item>
     </string-array>
 
     <string-array name="myWednesday">
         <item>Становая тяга</item>
         <item>Жим платформы</item>
         <item>Гиперэкстензия</item>
+        <item>Тяга блока к животу</item>
         <item>Подтягивания</item>
         <item>Отжимания трицепсами</item>
     </string-array>
@@ -34,8 +32,7 @@
         <item>Румынская тяга</item>
         <item>Тяга блин к груди</item>
         <item>Тяга блока к груди</item>
-        <item>Тяга блока к животу</item>
-        <item>Тяга от груди</item>
+        <item>Жим под углом</item>
     </string-array>
 
     <string-array name="myQuote">

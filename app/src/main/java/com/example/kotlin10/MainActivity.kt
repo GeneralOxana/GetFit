@@ -2,7 +2,9 @@ package com.example.kotlin10
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import java.util.*
 import kotlin.random.Random
@@ -18,25 +20,51 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(first)
         setContentView(R.layout.activity_main)
 
+        val day_off = getString(R.string.day_off)
+
+        val end_button: Button = findViewById(R.id.fin_end)
+        end_button.setOnClickListener{
+            Toast.makeText(this, "Домой?", Toast.LENGTH_LONG).show()
+            super.onDestroy()
+        }
+        //val exeTextView: TextView = findViewById(R.id.tv_exes)
+        //val exeTextView.text = day_off
+
+
+
         when (day) {
 
-            2 -> {val tvDay = findViewById<TextView>(R.id.tv_day)
+            2 -> {
+                val tvDay = findViewById<TextView>(R.id.tv_day)
                 tvDay.text = "Понедельник"
-                onListExe(counterExe, day)}
-            4 -> {val tvDay = findViewById<TextView>(R.id.tv_day)
+                onListExe(counterExe, day)
+            }
+            4 -> {
+                val tvDay = findViewById<TextView>(R.id.tv_day)
                 tvDay.text = "Среда"
-                onListExe(counterExe, day)}
-            6 -> {val tvDay = findViewById<TextView>(R.id.tv_day)
+                onListExe(counterExe, day)
+            }
+            6 -> {
+                val tvDay = findViewById<TextView>(R.id.tv_day)
                 tvDay.text = "Пятница"
-                onListExe(counterExe, day)}
-            1 -> {val tvDay = findViewById<TextView>(R.id.tv_day)
-                tvDay.text = "Воскресенье - выходной день"}
-            7 -> {val tvDay = findViewById<TextView>(R.id.tv_day)
-                tvDay.text = "Суббота - выходной день"}
-            3 -> {val tvDay = findViewById<TextView>(R.id.tv_day)
-                tvDay.text = "Вторник - выходной день"}
-            5 -> {val tvDay = findViewById<TextView>(R.id.tv_day)
-                tvDay.text = "Четверг - выходной день"}
+                onListExe(counterExe, day)
+            }
+            1 -> {
+                val tvDay = findViewById<TextView>(R.id.tv_day)
+                tvDay.text = "Воскресенье - выходной день"
+            }
+            7 -> {
+                val tvDay = findViewById<TextView>(R.id.tv_day)
+                tvDay.text = "Суббота - выходной день"
+            }
+            3 -> {
+                val tvDay = findViewById<TextView>(R.id.tv_day)
+                tvDay.text = "Вторник. \n"  + day_off
+            }
+            5 -> {
+                val tvDay = findViewById<TextView>(R.id.tv_day)
+                tvDay.text = "Четверг - выходной день"
+            }
         }
     }
 
@@ -68,14 +96,11 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-
-
-
     fun onClickSet(view: View) {
         var countSet = findViewById<TextView>(R.id.set)
         counterSet++
         countSet.text = counterSet.toString()
-    }
+        }
 
     fun onClickExe(view: View) {
         when {
@@ -89,6 +114,7 @@ class MainActivity : AppCompatActivity() {
                 countSet.text = counterSet.toString()
 
                 onListExe(counterExe, day)
+
             }
             counterExe > 4 -> {
                 onClickEnd(view)
@@ -105,7 +131,4 @@ class MainActivity : AppCompatActivity() {
         tvQuote.text = "Пора домой!!!  " + name
     }
 
-    fun onClickClose(view: View) {
-        super.onDestroy()
-    }
 }
