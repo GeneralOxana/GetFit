@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,24 +10,15 @@
 
 
     <TextView
-        android:id="@+id/tv_hi"
+        android:id="@+id/tv_day"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:text="@string/Hi"
+        android:padding="10dp"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         app:layout_constraintTop_toTopOf="parent"
         tools:layout_editor_absoluteX="3dp" />
 
-    <TextView
-        android:id="@+id/tv_day"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="5dp"
-        android:textAlignment="center"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintTop_toBottomOf="@+id/tv_hi" />
 
     <TextView
         android:id="@+id/tv_exes"
@@ -37,7 +27,7 @@
         android:padding="5dp"
         android:textAlignment="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintTop_toBottomOf="@+id/tv_hi" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_day" />
 
 
     <Button
@@ -69,9 +59,6 @@
         app:layout_constraintStart_toStartOf="parent" />
 
 
-
-
-
     <TextView
         android:id="@+id/tv_quote"
         android:layout_width="wrap_content"
@@ -81,7 +68,7 @@
         android:text="Попа сама себя не накачает"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_day" />
 
@@ -123,7 +110,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.98" />
+        app:layout_constraintVertical_bias="0.90" />
 
     <Button
         android:id="@+id/fin_end"
@@ -133,7 +120,17 @@
         android:text="@string/fin_end"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/next_exe" />
+
+    <Button
+        android:id="@+id/btn_camera"
+        android:text="селфи?"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/next_exe" />
 

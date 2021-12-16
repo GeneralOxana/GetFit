@@ -1,6 +1,8 @@
 package com.example.kotlin10
 
+import android.content.Intent
 import android.os.Bundle
+import android.provider.MediaStore
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
@@ -8,6 +10,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import java.util.*
 import kotlin.random.Random
+
 
 class MainActivity : AppCompatActivity() {
     var counterExe = 0
@@ -20,16 +23,20 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(first)
         setContentView(R.layout.activity_main)
 
-        val day_off = getString(R.string.day_off)
-
-        val end_button: Button = findViewById(R.id.fin_end)
-        end_button.setOnClickListener{
+       val end_button: Button = findViewById(R.id.fin_end)
+        end_button.setOnClickListener {
             Toast.makeText(this, "Домой?", Toast.LENGTH_LONG).show()
             super.onDestroy()
         }
-        //val exeTextView: TextView = findViewById(R.id.tv_exes)
-        //val exeTextView.text = day_off
 
+
+        val cameraButton: Button = findViewById(R.id.btn_camera)
+        cameraButton.setOnClickListener {
+           val intent: Intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+            startActivity(intent)
+
+        }
 
 
         when (day) {
@@ -59,7 +66,7 @@ class MainActivity : AppCompatActivity() {
             }
             3 -> {
                 val tvDay = findViewById<TextView>(R.id.tv_day)
-                tvDay.text = "Вторник. \n"  + day_off
+                tvDay.text = "Вторник. \n"
             }
             5 -> {
                 val tvDay = findViewById<TextView>(R.id.tv_day)
@@ -100,7 +107,7 @@ class MainActivity : AppCompatActivity() {
         var countSet = findViewById<TextView>(R.id.set)
         counterSet++
         countSet.text = counterSet.toString()
-        }
+    }
 
     fun onClickExe(view: View) {
         when {
