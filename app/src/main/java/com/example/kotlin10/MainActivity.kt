@@ -23,8 +23,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(first)
         setContentView(R.layout.activity_main)
 
-       val end_button: Button = findViewById(R.id.fin_end)
-        end_button.setOnClickListener {
+       val endbutton: Button = findViewById(R.id.fin_end)
+        endbutton.setOnClickListener {
             Toast.makeText(this, "Домой?", Toast.LENGTH_LONG).show()
             super.onDestroy()
         }
@@ -37,6 +37,15 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
 
         }
+
+        val listButton: Button = findViewById(R.id.btn_list)
+        listButton.setOnClickListener {val listIntent = Intent(this, ListActivity::class.java)
+        startActivity(listIntent)}
+
+
+
+
+
 
 
         when (day) {
