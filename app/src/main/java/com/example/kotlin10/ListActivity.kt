@@ -2,8 +2,6 @@ package com.example.kotlin10
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ListAdapter
-import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -16,24 +14,24 @@ class ListActivity : AppCompatActivity() {
         setContentView(R.layout.activity_list)
 
         val userList: List<User> = listOf(
-            User("Разведение ног"),
-            User("Сгибание ног"),
-            User("Разгибание ног"),
-            User("Отжимание"),
-            User("Пресс"),
-            User("Жим гориз."),
-            User("Становая тяга"),
-            User("Жим платформы"),
-            User("Гиперэкстензия"),
-            User("Тяга блока к животу"),
-            User("Подтягивания"),
-            User("Отжимания трицепсами"),
-            User("Приседание"),
-            User("Выпады"),
-            User("Румынская тяга"),
-            User("Тяга блин к груди"),
-            User("Тяга блока к груди"),
-            User("Жим под углом")
+            User("Разведение ног", R.drawable.exe1),
+            User("Сгибание ног", R.drawable.exe2),
+            User("Разгибание ног", R.drawable.exe3),
+            User("Отжимание",R.drawable.exe4),
+            User("Пресс",R.drawable.exe5),
+            User("Жим гориз.",R.drawable.exe18),
+            User("Становая тяга",R.drawable.exe7),
+            User("Жим платформы",R.drawable.exe8),
+            User("Гиперэкстензия",R.drawable.exe9),
+            User("Тяга блока к животу",R.drawable.exe10),
+            User("Подтягивания",R.drawable.exe11),
+            User("Отжимания трицепсами",R.drawable.exe12),
+            User("Приседание",R.drawable.exe13),
+            User("Выпады",R.drawable.exe14),
+            User("Румынская тяга",R.drawable.exe15),
+            User("Тяга блин к груди",R.drawable.exe16),
+            User("Тяга блока к груди",R.drawable.exe17),
+            User("Жим под углом",R.drawable.exe18)
 
         )
 
