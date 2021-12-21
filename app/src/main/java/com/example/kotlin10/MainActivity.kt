@@ -71,15 +71,15 @@ class MainActivity : AppCompatActivity() {
             }
             7 -> {
                 val tvDay = findViewById<TextView>(R.id.tv_day)
-                tvDay.text = "Суббота - выходной день"
+                tvDay.text = "Суббота \n"  + getString(R.string.day_off)
             }
             3 -> {
                 val tvDay = findViewById<TextView>(R.id.tv_day)
-                tvDay.text = "Вторник. \n"
+                tvDay.text = "Вторник \n" +  getString(R.string.day_off)
             }
             5 -> {
                 val tvDay = findViewById<TextView>(R.id.tv_day)
-                tvDay.text = "Четверг - выходной день"
+                tvDay.text = "Четверг \n" + getString(R.string.day_off)
             }
         }
     }
