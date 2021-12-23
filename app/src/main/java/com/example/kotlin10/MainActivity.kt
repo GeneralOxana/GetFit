@@ -13,18 +13,17 @@ import kotlin.random.Random
 
 
 class MainActivity : AppCompatActivity() {
-    var counterExe = 0
-    var counterSet = 0
+    var counterExe = 0 //упражнения
+    var counterSet = 0 //подходы
     val calendar: Calendar = Calendar.getInstance()
     val day: Int = calendar.get(Calendar.DAY_OF_WEEK)
-
 
     override fun onCreate(first: Bundle?) {
         super.onCreate(first)
         setContentView(R.layout.activity_main)
 
-       val endbutton: Button = findViewById(R.id.fin_end)
-        endbutton.setOnClickListener {
+        val endButton: Button = findViewById(R.id.fin_end)
+        endButton.setOnClickListener {
             Toast.makeText(this, "Домой?", Toast.LENGTH_LONG).show()
             super.onDestroy()
         }
@@ -32,54 +31,51 @@ class MainActivity : AppCompatActivity() {
 
         val cameraButton: Button = findViewById(R.id.btn_camera)
         cameraButton.setOnClickListener {
-           val intent: Intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+            val intent: Intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             startActivity(intent)
 
         }
 
         val listButton: Button = findViewById(R.id.btn_list)
-        listButton.setOnClickListener {val listIntent = Intent(this, ListActivity::class.java)
-        startActivity(listIntent)}
-
-
-
-
-
+        listButton.setOnClickListener {
+            val listIntent = Intent(this, ListActivity::class.java)
+            startActivity(listIntent)
+        }
 
 
         when (day) {
 
             2 -> {
                 val tvDay = findViewById<TextView>(R.id.tv_day)
-                tvDay.text = "Понедельник"
+                tvDay.text = Days.Понедельник.toString()
                 onListExe(counterExe, day)
             }
             4 -> {
                 val tvDay = findViewById<TextView>(R.id.tv_day)
-                tvDay.text = "Среда"
+                tvDay.text = Days.Среда.toString()
                 onListExe(counterExe, day)
             }
             6 -> {
                 val tvDay = findViewById<TextView>(R.id.tv_day)
-                tvDay.text = "Пятница"
+                tvDay.text = Days.Пятница.toString()
                 onListExe(counterExe, day)
             }
             1 -> {
                 val tvDay = findViewById<TextView>(R.id.tv_day)
-                tvDay.text = "Воскресенье - выходной день"
+                tvDay.text = Days.Воскресенье.toString() + "\n" + getString(R.string.day_off)
             }
             7 -> {
                 val tvDay = findViewById<TextView>(R.id.tv_day)
-                tvDay.text = "Суббота \n"  + getString(R.string.day_off)
+                tvDay.text = Days.Суббота.toString() + "\n" + getString(R.string.day_off)
             }
             3 -> {
                 val tvDay = findViewById<TextView>(R.id.tv_day)
-                tvDay.text = "Вторник \n" +  getString(R.string.day_off)
+                tvDay.text = Days.Вторник.toString() + "\n" + getString(R.string.day_off)
             }
             5 -> {
                 val tvDay = findViewById<TextView>(R.id.tv_day)
-                tvDay.text = "Четверг \n" + getString(R.string.day_off)
+                tvDay.text = Days.Четверг.toString() + "\n" + getString(R.string.day_off)
             }
         }
     }
@@ -89,21 +85,18 @@ class MainActivity : AppCompatActivity() {
         when {
             day1 == 2 -> {
                 val myList = resources.getStringArray(R.array.myMonday)
-                val arraySize = myList.size
                 var name = myList[i]
                 var tvMyExe = findViewById<TextView>(R.id.tv_exe)
                 tvMyExe.text = name
             }
             day1 == 4 -> {
                 val myList = resources.getStringArray(R.array.myWednesday)
-                val arraySize = myList.size
                 var name = myList[i]
                 var tvMyExe = findViewById<TextView>(R.id.tv_exe)
                 tvMyExe.text = name
             }
             day1 == 6 -> {
                 val myList = resources.getStringArray(R.array.myFriday)
-                val arraySize = myList.size
                 var name = myList[i]
                 var tvMyExe = findViewById<TextView>(R.id.tv_exe)
                 tvMyExe.text = name
