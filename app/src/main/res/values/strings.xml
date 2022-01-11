@@ -1,40 +1,22 @@
 <resources>
-    <string name="end">Хочу домой!</string>
     <string name="fin_end">Well done!</string>
     <string name="next_exe">Следующее упражнение</string>
     <string name="next_set">Следующий подход</string>
-    <string name="Hi">Привет! Что у нас сегодня?</string>
     <string name="app_name">Get fit!</string>
     <string name="day_off">Тренировка в выходной? Отлично! Час кардио тебе не повредит)</string>
 
+    <string name="myMonday">Разведение ног\n\Сгибание ног\n\Разгибание ног\n\Отжимание\n\Пресс\n\Жим гориз.</string>
+    <string name="myWednesday">Становая тяга\n\Жим платформы\n\Гиперэкстензия\n\Тяга блока к животу\n\Подтягивания\n\Отжимания трицепсами</string>
+    <string name="myFriday">Приседание\n\Выпады\n\Румынская тяга\n\Тяга блин к груди\n\Тяга блока к груди\n\Жим под углом</string>
 
-
-
-    <string-array name="myMonday">
-        <item>Разведение ног</item>
-        <item>Сгибание ног</item>
-        <item>Разгибание ног</item>
-        <item>Отжимание</item>
-        <item>Пресс</item>
-        <item>Жим гориз.</item>
-    </string-array>
-
-    <string-array name="myWednesday">
-        <item>Становая тяга</item>
-        <item>Жим платформы</item>
-        <item>Гиперэкстензия</item>
-        <item>Тяга блока к животу</item>
-        <item>Подтягивания</item>
-        <item>Отжимания трицепсами</item>
-    </string-array>
-
-    <string-array name="myFriday">
-        <item>Приседание</item>
-        <item>Выпады</item>
-        <item>Румынская тяга</item>
-        <item>Тяга блин к груди</item>
-        <item>Тяга блока к груди</item>
-        <item>Жим под углом</item>
+    <string-array name="myDays">
+        <item>Понедельник</item>
+        <item>Вторник</item>
+        <item>Среда</item>
+        <item>Четверг</item>
+        <item>Пятница</item>
+        <item>Суббота</item>
+        <item>Воскресенье</item>
     </string-array>
 
     <string-array name="myQuote">

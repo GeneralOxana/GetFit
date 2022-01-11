@@ -5,15 +5,11 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-
 class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-    private val nameTV: TextView = itemView.findViewById(R.id.exe_TV)
-    private val imgIV: ImageView = itemView.findViewById(R.id.exe_IV)
-
     fun bind(user: User) {
-        nameTV.text = user.name
-        imgIV.setImageResource(user.image)
+        itemView.findViewById<TextView>(R.id.exe_TV).text = user.name + user.days
+        itemView.findViewById<ImageView>(R.id.exe_IV).setImageResource(user.image)
 
     }
 }

@@ -14,9 +14,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Kotlin10">
         <activity
+            android:name=".ListDayActivity"
+            android:exported="false" />
+        <activity
             android:name=".ListActivity"
             android:exported="false"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
